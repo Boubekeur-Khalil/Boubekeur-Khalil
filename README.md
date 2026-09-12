@@ -1,66 +1,114 @@
-# Hey, I'm Khalil
+<div align="center">
 
-Security researcher & full-stack developer from Algeria.
+# Khalil Boubekeur
 
-I hunt bugs on private programs and build the tools I wish I had.
+**Security Researcher | Bug Bounty Hunter | Full-Stack Developer**
 
-## What I do
+[![YesWeHack](https://img.shields.io/badge/YesWeHack-Private%20Programs-7B68EE?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0wIDE4Yy00LjQyIDAtOC0zLjU4LTgtOHMzLjU4LTggOC04IDggMy41OCA4IDgtMy41OCA4LTggOHoiLz48L3N2Zz4=)](https://www.yeswehack.com/)
+[![HackerOne](https://img.shields.io/badge/HackerOne-Active-494649?style=for-the-badge&logo=hackerone&logoColor=white)](https://www.hackerone.com/)
 
-**Bug Bounty** — I specialize in chaining low-severity findings into critical exploit paths. My methodology focuses on SSO misconfigurations, API authorization gaps, and server-side file handling flaws.
+*I hunt bugs on private programs and build the tools I wish I had.*
 
-**Engagement highlight:** Discovered a 6-step chain escalating from unauthenticated outsider to Remote Code Execution on a private program — nOAuth ATO, leaked reset tokens, systemic ACL bypass, path traversal LFI, JWT key theft, and unrestricted file upload to webroot. Produced 9 accepted reports (3 Critical, 2 High, 4 Medium) from a single target.
+</div>
 
-**Development** — Android (Kotlin/Dart), React, Django, Python tooling. I like building things that solve real problems, not boilerplate.
+---
 
-## Bug Bounty Stats
+### About Me
 
-```
-Findings submitted    9 accepted (1 engagement)
-Severity breakdown    3 Critical  |  2 High  |  4 Medium
-Highest CVSS          10.0 (path traversal → arbitrary file read)
-Longest chain         6 steps (outsider → RCE)
-Platform              YesWeHack (private programs)
-```
+Security researcher from Algeria. I specialize in **chaining low-severity findings into critical exploit paths** - SSO misconfigurations, API authorization gaps, and server-side file handling flaws.
 
-## Vulnerability Classes I Hunt
+I also build things: Android apps (Kotlin/Dart), web platforms (React, Django, Angular), and security tooling in Python.
 
-| Class | Technique |
-|-------|-----------|
-| **SSO/OAuth ATO** | nOAuth (multi-tenant MSAL + mutable Graph mail attribute), SAML assertion manipulation |
-| **API Authorization** | Systemic write ACL bypass (POST blocked, PUT/PATCH/DELETE open), BOLA/IDOR on collection endpoints |
-| **File Handling** | Path traversal via writable metadata fields, unrestricted upload to webroot |
-| **Authentication** | Password reset token leakage, unauthenticated reset endpoints, JWT key theft + forgery |
-| **Recon** | JS bundle mining, OpenAPI spec analysis, CT log expansion, favicon hash pivoting |
+---
 
-## Featured Project
+### Highlight: 6-Step Chain to RCE
 
-### [vuln-chain-labs](https://github.com/Boubekeur-Khalil/vuln-chain-labs)
-
-A deliberately vulnerable Docker lab that reproduces a real exploit chain I discovered during an authorized engagement. 7 challenges that walk you through every step from zero access to RCE.
+> Discovered on a private YesWeHack program. Escalated from **unauthenticated outsider** to **Remote Code Execution** through a chain of 6 vulnerabilities, producing **9 accepted reports** from a single target.
 
 ```
-[nOAuth ATO] → [Reset Token Leak] → [ACL Bypass] → [Path Traversal LFI]
-    → [JWT Forgery] → [PHP Upload to Webroot] → [Remote Code Execution]
+  Outsider                                                            RCE
+     |                                                                 |
+     v                                                                 v
+[nOAuth ATO] --> [Reset Token Leak] --> [ACL Bypass] --> [LFI] --> [JWT Forgery] --> [PHP Upload]
+  CVSS 9.1         CVSS 8.8            CVSS 8.3       CVSS 10.0                      CVSS 9.9
 ```
 
-Each lab has objectives, hints, and full solution walkthroughs with curl commands. Includes an automated end-to-end exploit script.
+---
 
-## Tech & Tools
+### Bug Bounty Stats
 
-**Languages:** Python, PHP, Bash, TypeScript, Kotlin, Dart, C
+<div align="center">
 
-**Security:** Burp Suite, curl, Caido, Nuclei, Subfinder, httpx, Amass, ffuf, interactsh
+| | |
+|:---|:---|
+| **Findings** | 9 accepted (3 Critical, 2 High, 4 Medium) |
+| **Highest CVSS** | 10.0 - Path traversal to arbitrary file read |
+| **Longest chain** | 6 steps (outsider to RCE) |
+| **Reward** | First engagement, first payout |
+| **Platform** | YesWeHack (private programs) |
 
-**Dev:** React, Django, Angular, Symfony, Docker, Git
+</div>
 
-**Platforms:** YesWeHack, HackerOne
+---
 
-## Currently
+### Vulnerability Classes
+
+```
+SSO / OAuth ATO         nOAuth, multi-tenant MSAL, mutable Graph attributes, SAML manipulation
+API Authorization       Systemic ACL bypass (POST blocked, PUT/PATCH/DELETE open), BOLA, IDOR
+File Handling           Path traversal via writable metadata, unrestricted upload to webroot
+Authentication          Reset token leakage, unauthenticated reset endpoints, JWT key forgery
+Recon                   JS bundle mining, OpenAPI spec analysis, CT logs, favicon hash pivoting
+```
+
+---
+
+### Featured Project
+
+<a href="https://github.com/Boubekeur-Khalil/vuln-chain-labs">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Boubekeur-Khalil&repo=vuln-chain-labs&theme=github_dark&hide_border=true&bg_color=0d1117" />
+</a>
+
+**7 Docker-based labs** reproducing the full exploit chain from an authorized engagement. Each lab includes objectives, progressive hints, and complete solution walkthroughs with curl commands. Ships with an automated end-to-end exploit script.
+
+---
+
+### Tech & Tools
+
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black)
+
+![Burp Suite](https://img.shields.io/badge/Burp%20Suite-FF6633?style=flat-square&logo=portswigger&logoColor=white)
+![Caido](https://img.shields.io/badge/Caido-6C5CE7?style=flat-square)
+![Nuclei](https://img.shields.io/badge/Nuclei-6236FF?style=flat-square)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
+![Symfony](https://img.shields.io/badge/Symfony-000000?style=flat-square&logo=symfony&logoColor=white)
+
+</div>
+
+---
+
+### Currently
 
 - Hunting on private bug bounty programs
 - Building security tooling and vulnerable labs
 - Expanding into cloud security and mobile app testing
 
-## Contact
+---
 
-If you run a private program and want someone who reads your JS bundles before touching a scanner — let's talk.
+<div align="center">
+
+*If you run a private program and want someone who reads your JS bundles before touching a scanner - let's talk.*
+
+[![Email](https://img.shields.io/badge/Email-khalil.beckeur@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:khalil.beckeur@gmail.com)
+
+</div>
