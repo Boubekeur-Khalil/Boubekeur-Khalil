@@ -65,9 +65,11 @@ Recon                   JS bundle mining, OpenAPI spec analysis, CT logs, favico
 
 ### Featured Project
 
-<a href="https://github.com/Boubekeur-Khalil/vuln-chain-labs">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Boubekeur-Khalil&repo=vuln-chain-labs&theme=github_dark&hide_border=true&bg_color=0d1117" />
-</a>
+### [`vuln-chain-labs`](https://github.com/Boubekeur-Khalil/vuln-chain-labs)
+
+[![Lab](https://img.shields.io/badge/Docker-Vulnerable%20Lab-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://github.com/Boubekeur-Khalil/vuln-chain-labs)
+[![Labs](https://img.shields.io/badge/Challenges-7-critical?style=for-the-badge)](https://github.com/Boubekeur-Khalil/vuln-chain-labs)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](https://github.com/Boubekeur-Khalil/vuln-chain-labs/blob/master/LICENSE)
 
 **7 Docker-based labs** reproducing the full exploit chain from an authorized engagement. Each lab includes objectives, progressive hints, and complete solution walkthroughs with curl commands. Ships with an automated end-to-end exploit script.
 
